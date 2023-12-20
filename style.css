@@ -79,13 +79,14 @@ body {
   position: absolute;
   top: -40px;
   left: 0px;
-  animation-name: drive;
+  /*   animation-name: drive;
   animation-duration: 5s;
-  animation-fill-mode: both;
+  animation-fill-mode: both; */
   /* animation-delay: 3s; */
   /*  animation-iteration-count: 3; */
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  /*   animation-iteration-count: infinite;
+  animation-timing-function: linear; */
+  animation: drive 3s both infinite linear, jump 0.3s 1.2s ease;
 }
 
 .luigi {
@@ -146,4 +147,16 @@ body {
   100% {
     background-color: #6a78d1;
   } */
+}
+
+@keyframes jump {
+  0% {
+    top: -40px;
+  }
+  50% {
+    top: -100px;
+  }
+  100% {
+    top: -40px;
+  }
 }
