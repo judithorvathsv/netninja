@@ -33,11 +33,13 @@ img {
   transform: rotate(360deg);
 }
 
+/**************************************************/
+
 html,
 body {
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   margin: 0;
 }
 
@@ -161,6 +163,8 @@ body {
   }
 }
 
+/**************************************************/
+
 main {
   margin: 0;
   position: relative;
@@ -262,5 +266,139 @@ button {
   }
   100% {
     transform: translateY(650px) rotateZ(75deg);
+  }
+}
+
+/**************************************************/
+main {
+  background-color: #fff;
+}
+
+header {
+  padding: 10px 20px;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+}
+header:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.basket ul {
+  padding: 0;
+  margin-top: 40px;
+}
+.basket li {
+  display: inline-block;
+  list-style-type: none;
+  width: 30%;
+  margin: 30px 1.5%;
+  text-align: center;
+}
+.basket button {
+  border-radius: 10px;
+  cursor: pointer;
+}
+.basket header div {
+  float: right;
+  position: relative;
+  z-index: 1;
+}
+.basket header h1 {
+  float: left;
+}
+
+.zoom {
+  position: absolute;
+  top: 40px;
+  right: 50%;
+  width: 40px;
+  opacity: 0;
+  animation: zoom 1s ease forwards;
+}
+
+@keyframes zoom {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    right: 40px;
+  }
+}
+
+/**************************************************/
+
+#asBody {
+  background: #333;
+  font-family: verdana;
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper2 {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+#titleCard {
+  color: #fff;
+  font-weight: normal;
+  text-align: center;
+  font-size: 48px;
+}
+
+.panels2 {
+  list-style-type: none;
+  padding: 0;
+}
+
+.panels2 li {
+  position: relative;
+  width: 25%;
+  margin: 0;
+  display: block;
+  box-sizing: border-box;
+  float: left;
+}
+
+.panels2 li div {
+  width: 100%;
+  padding: 50% 0;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.panels2 div.back {
+  transform: rotateY(90deg);
+}
+
+.panels2 div.front {
+  position: absolute;
+}
+
+.panels2 li:hover div.front {
+  animation: twirl 0.2s ease-in forwards;
+}
+
+.panels2 li:hover div.back {
+  animation: twirl 0.2s 0.2s ease-in forwards reverse;
+}
+
+@keyframes twirl {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(90deg);
   }
 }
